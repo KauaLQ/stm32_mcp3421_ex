@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
   29:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   in several modes:
   30:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   (+) Input mode
   31:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   (+) Analog mode
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 2
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 2
 
 
   32:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   (+) Output mode
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
   86:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****    (#) To lock pin configuration until next reset use HAL_GPIO_LockPin().
   87:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c **** 
   88:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****    (#) During and just after reset, the alternate functions are not
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 3
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 3
 
 
   89:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****        active and the GPIO pins are configured in input floating mode (except JTAG
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
  143:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c **** /**
  144:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   * @}
  145:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   */
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 4
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 4
 
 
  146:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c **** /* Private macro -------------------------------------------------------------*/
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
  183:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   uint32_t temp;
   45              		.loc 1 183 3 view .LVU5
  184:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   uint32_t config = 0x00u;
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 5
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 5
 
 
   46              		.loc 1 184 3 view .LVU6
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
   74 0028 1FD1     		bne	.L9
   75 002a 06E0     		b	.L12
   76              	.L13:
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 6
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 6
 
 
   77 002c 7B4D     		ldr	r5, .L40+4
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
  250:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****             config = GPIO_CR_MODE_INPUT + GPIO_CR_CNF_INPUT_FLOATING;
  251:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****           }
  252:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****           else if (GPIO_Init->Pull == GPIO_PULLUP)
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 7
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 7
 
 
   90              		.loc 1 252 16 is_stmt 1 view .LVU21
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
  122              	.L10:
  227:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****           config = GPIO_Init->Speed + GPIO_CR_CNF_AF_OUTPUT_PP;
  123              		.loc 1 227 11 view .LVU36
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 8
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 8
 
 
  228:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****           break;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
  159 0066 00E0     		b	.L9
  160              	.LVL15:
  161              	.L27:
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 9
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 9
 
 
  250:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****           }
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
  194              		.loc 1 291 9 is_stmt 1 view .LVU63
  195              	.LBB2:
  196              		.loc 1 291 9 view .LVU64
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 10
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 10
 
 
  197              		.loc 1 291 9 view .LVU65
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
  248 00ee 06D0     		beq	.L38
  249              		.loc 1 294 9 discriminator 12 view .LVU79
  250 00f0 0623     		movs	r3, #6
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 11
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 11
 
 
  251 00f2 07E0     		b	.L17
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
  294 011c 43EA0E03 		orr	r3, r3, lr
  295 0120 9360     		str	r3, [r2, #8]
  296              	.LVL29:
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 12
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 12
 
 
  297              	.L19:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
  323              		.loc 1 329 23 is_stmt 0 view .LVU103
  324 0146 4B68     		ldr	r3, [r1, #4]
  325              		.loc 1 329 12 view .LVU104
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 13
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 13
 
 
  326 0148 13F4803F 		tst	r3, #65536
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
  359              		.loc 1 205 7 is_stmt 1 view .LVU117
  208:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****       {
  360              		.loc 1 208 7 view .LVU118
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 14
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 14
 
 
  208:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****       {
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
  294:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****         AFIO->EXTICR[position >> 2u] = temp;
  409              		.loc 1 294 9 discriminator 10 view .LVU125
  410 01e0 0423     		movs	r3, #4
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 15
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 15
 
 
  411 01e2 8FE7     		b	.L17
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
  457 0218 00002210 		.word	270663680
  458 021c 00003110 		.word	271646720
  459 0220 00100240 		.word	1073876992
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 16
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 16
 
 
  460 0224 00000140 		.word	1073807360
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
  493              	.L64:
  494              		.cfi_def_cfa_offset 20
  495              		.cfi_offset 4, -20
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 17
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 17
 
 
  496              		.cfi_offset 5, -16
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
  521              		.loc 1 393 7 is_stmt 1 view .LVU152
  522              		.loc 1 393 68 is_stmt 0 discriminator 1 view .LVU153
  523 001c 4FEA820E 		lsl	lr, r2, #2
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 18
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 18
 
 
  524              	.L48:
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
  562              		.loc 1 374 7 is_stmt 1 view .LVU165
  374:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****       tmp &= 0x0FuL << (4u * (position & 0x03u));
  563              		.loc 1 374 35 is_stmt 0 view .LVU166
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 19
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 19
 
 
  564 0054 9708     		lsrs	r7, r2, #2
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
  605 009c B2D0     		beq	.L64
  376:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****       {
  606              		.loc 1 376 19 discriminator 12 view .LVU180
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 20
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 20
 
 
  607 009e 4FF0060E 		mov	lr, #6
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
  651 00f0 91E7     		b	.L46
  652              	.LVL55:
  653              	.L47:
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 21
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 21
 
 
  392:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****       registeroffset = (iocurrent < GPIO_PIN_8) ? (position << 2u) : ((position - 8u) << 2u);
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
  352:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   uint32_t position = 0x00u;
  694              		.loc 1 352 1 view .LVU204
  695 0110 F0B5     		push	{r4, r5, r6, r7, lr}
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 22
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 22
 
 
  696              		.cfi_def_cfa_offset 20
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
  424:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c **** /**
  425:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   * @brief  Reads the specified input port pin.
  426:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   * @param  GPIOx: where x can be (A..G depending on device used) to select the GPIO peripheral
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 23
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 23
 
 
  427:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   * @param  GPIO_Pin: specifies the port bit to read.
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
  766              		.thumb_func
  768              	HAL_GPIO_WritePin:
  769              	.LVL67:
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 24
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 24
 
 
  770              	.LFB68:
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
  792              		.loc 1 479 1 view .LVU227
  793 000a 7047     		bx	lr
  794              		.cfi_endproc
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 25
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 25
 
 
  795              	.LFE68:
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
  831              	.LFE69:
  833              		.section	.text.HAL_GPIO_LockPin,"ax",%progbits
  834              		.align	1
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 26
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 26
 
 
  835              		.global	HAL_GPIO_LockPin
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
  865              		.loc 1 524 3 is_stmt 1 view .LVU248
  866              		.loc 1 524 15 is_stmt 0 view .LVU249
  867 0012 8161     		str	r1, [r0, #24]
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 27
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 27
 
 
  525:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   /* Set LCKx bit(s): LCKK='1' + LCK[15-0] */
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
  906              		.weak	HAL_GPIO_EXTI_Callback
  907              		.syntax unified
  908              		.thumb
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 28
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 28
 
 
  909              		.thumb_func
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
  936              		.cfi_startproc
  937              		@ args = 0, pretend = 0, frame = 0
  938              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 29
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 29
 
 
  547:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c ****   /* EXTI line interrupt detected */
@@ -1728,31 +1728,31 @@ ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 1
  976              		.file 4 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h"
  977              		.file 5 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
  978              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
-ARM GAS  C:\Users\limak\AppData\Local\Temp\cc9qczEq.s 			page 30
+ARM GAS  C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s 			page 30
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f1xx_hal_gpio.c
-C:\Users\limak\AppData\Local\Temp\cc9qczEq.s:19     .text.HAL_GPIO_Init:00000000 $t
-C:\Users\limak\AppData\Local\Temp\cc9qczEq.s:25     .text.HAL_GPIO_Init:00000000 HAL_GPIO_Init
-C:\Users\limak\AppData\Local\Temp\cc9qczEq.s:372    .text.HAL_GPIO_Init:00000188 $d
-C:\Users\limak\AppData\Local\Temp\cc9qczEq.s:392    .text.HAL_GPIO_Init:000001d4 $t
-C:\Users\limak\AppData\Local\Temp\cc9qczEq.s:457    .text.HAL_GPIO_Init:00000218 $d
-C:\Users\limak\AppData\Local\Temp\cc9qczEq.s:467    .text.HAL_GPIO_DeInit:00000000 $t
-C:\Users\limak\AppData\Local\Temp\cc9qczEq.s:473    .text.HAL_GPIO_DeInit:00000000 HAL_GPIO_DeInit
-C:\Users\limak\AppData\Local\Temp\cc9qczEq.s:716    .text.HAL_GPIO_DeInit:00000118 $d
-C:\Users\limak\AppData\Local\Temp\cc9qczEq.s:723    .text.HAL_GPIO_ReadPin:00000000 $t
-C:\Users\limak\AppData\Local\Temp\cc9qczEq.s:729    .text.HAL_GPIO_ReadPin:00000000 HAL_GPIO_ReadPin
-C:\Users\limak\AppData\Local\Temp\cc9qczEq.s:762    .text.HAL_GPIO_WritePin:00000000 $t
-C:\Users\limak\AppData\Local\Temp\cc9qczEq.s:768    .text.HAL_GPIO_WritePin:00000000 HAL_GPIO_WritePin
-C:\Users\limak\AppData\Local\Temp\cc9qczEq.s:798    .text.HAL_GPIO_TogglePin:00000000 $t
-C:\Users\limak\AppData\Local\Temp\cc9qczEq.s:804    .text.HAL_GPIO_TogglePin:00000000 HAL_GPIO_TogglePin
-C:\Users\limak\AppData\Local\Temp\cc9qczEq.s:834    .text.HAL_GPIO_LockPin:00000000 $t
-C:\Users\limak\AppData\Local\Temp\cc9qczEq.s:840    .text.HAL_GPIO_LockPin:00000000 HAL_GPIO_LockPin
-C:\Users\limak\AppData\Local\Temp\cc9qczEq.s:905    .text.HAL_GPIO_EXTI_Callback:00000000 $t
-C:\Users\limak\AppData\Local\Temp\cc9qczEq.s:911    .text.HAL_GPIO_EXTI_Callback:00000000 HAL_GPIO_EXTI_Callback
-C:\Users\limak\AppData\Local\Temp\cc9qczEq.s:926    .text.HAL_GPIO_EXTI_IRQHandler:00000000 $t
-C:\Users\limak\AppData\Local\Temp\cc9qczEq.s:932    .text.HAL_GPIO_EXTI_IRQHandler:00000000 HAL_GPIO_EXTI_IRQHandler
-C:\Users\limak\AppData\Local\Temp\cc9qczEq.s:968    .text.HAL_GPIO_EXTI_IRQHandler:00000018 $d
+C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s:19     .text.HAL_GPIO_Init:00000000 $t
+C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s:25     .text.HAL_GPIO_Init:00000000 HAL_GPIO_Init
+C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s:372    .text.HAL_GPIO_Init:00000188 $d
+C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s:392    .text.HAL_GPIO_Init:000001d4 $t
+C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s:457    .text.HAL_GPIO_Init:00000218 $d
+C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s:467    .text.HAL_GPIO_DeInit:00000000 $t
+C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s:473    .text.HAL_GPIO_DeInit:00000000 HAL_GPIO_DeInit
+C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s:716    .text.HAL_GPIO_DeInit:00000118 $d
+C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s:723    .text.HAL_GPIO_ReadPin:00000000 $t
+C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s:729    .text.HAL_GPIO_ReadPin:00000000 HAL_GPIO_ReadPin
+C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s:762    .text.HAL_GPIO_WritePin:00000000 $t
+C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s:768    .text.HAL_GPIO_WritePin:00000000 HAL_GPIO_WritePin
+C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s:798    .text.HAL_GPIO_TogglePin:00000000 $t
+C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s:804    .text.HAL_GPIO_TogglePin:00000000 HAL_GPIO_TogglePin
+C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s:834    .text.HAL_GPIO_LockPin:00000000 $t
+C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s:840    .text.HAL_GPIO_LockPin:00000000 HAL_GPIO_LockPin
+C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s:905    .text.HAL_GPIO_EXTI_Callback:00000000 $t
+C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s:911    .text.HAL_GPIO_EXTI_Callback:00000000 HAL_GPIO_EXTI_Callback
+C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s:926    .text.HAL_GPIO_EXTI_IRQHandler:00000000 $t
+C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s:932    .text.HAL_GPIO_EXTI_IRQHandler:00000000 HAL_GPIO_EXTI_IRQHandler
+C:\Users\limak\AppData\Local\Temp\ccSk8bgT.s:968    .text.HAL_GPIO_EXTI_IRQHandler:00000018 $d
 
 NO UNDEFINED SYMBOLS

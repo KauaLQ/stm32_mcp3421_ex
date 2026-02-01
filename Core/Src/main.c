@@ -2,6 +2,9 @@
 #include "cmsis_os.h"
 #include "stdio.h"
 #include "string.h"
+#include "stdbool.h"
+#include "stm32_sw_i2c.h"
+#include "dwt_stm32_delay.h"
 
 I2C_HandleTypeDef hi2c1;
 UART_HandleTypeDef huart1;
@@ -42,6 +45,33 @@ int32_t MCP3421_ReadRaw(void)
     return 0;
 }
 
+int32_t MCP3421_Soft_ReadRaw(void) {
+    uint8_t rx[3];
+    uint8_t config = 0x9C; // 18 bits, ganho 1, contínuo
+
+    // 1. Enviar configuração para iniciar/garantir modo
+    // O MCP3421_ADDR já deve estar deslocado (0x68 << 1)
+    I2C_write_byte(MCP3421_ADDR, true, false); 
+    I2C_write_byte(config, false, true);
+
+    // 2. Aguardar a conversão (270ms para 18 bits)
+    HAL_Delay(270);
+
+    // 3. Ler os dados
+    // Enviamos o endereço com o bit de leitura (LSB = 1)
+    if (I2C_write_byte(MCP3421_ADDR | 0x01, true, false)) {
+        rx[0] = I2C_read_byte(true, false);  // MSB (com ACK)
+        rx[1] = I2C_read_byte(true, false);  // Middle Byte (com ACK)
+        rx[2] = I2C_read_byte(false, true);  // LSB (com NACK e STOP)
+
+        // Montagem do valor de 18 bits (mesma lógica do seu original)
+        int32_t raw = ((int32_t)((int8_t)rx[0]) << 16) | (rx[1] << 8) | rx[2];
+        return raw;
+    }
+    
+    return 0;
+}
+
 float mcpToVoltage(int32_t adc, uint8_t resolution) {
     int32_t maxCounts;
 
@@ -70,7 +100,14 @@ int main(void)
 
   // osKernelStart();
 
-  char msg[64];
+  // IMPORTANTE: Inicializar o contador de microssegundos
+  if (DWT_Delay_Init() != 0) {
+      Error_Handler(); // Falha ao iniciar contador
+  }
+
+  I2C_init(); // Coloca as linhas em nível alto
+
+  char msg[200];
   while (1)
   {
     int32_t raw = MCP3421_ReadRaw();
@@ -78,10 +115,18 @@ int main(void)
     float v_adjust = v / DIVISOR_RES_MCP1; // Ajusta para divisor de tensão externo
     int32_t integras = (int32_t)v_adjust;
     int32_t decimais = (int32_t)((v_adjust - integras) * 1000000); // 6 casas decimais
-
     if (decimais < 0) decimais *= -1; // Garante que a parte decimal seja positiva
 
-    snprintf(msg, sizeof(msg), "RAW: %ld | V: %ld.%06ld V\r\n", raw, integras, decimais);
+    // Leitura do MCP via Software I2C (PB4/PB5)
+    int32_t raw_soft = MCP3421_Soft_ReadRaw();
+    // Conversão (usando sua função mcpToVoltage já existente)
+    float v_soft = mcpToVoltage(raw_soft, 18);
+    float v_soft_adjust = v_soft / DIVISOR_RES_MCP1;
+    int32_t integras_soft = (int32_t)v_soft_adjust;
+    int32_t decimais_soft = (int32_t)((v_soft_adjust - integras_soft) * 1000000);
+    if (decimais_soft < 0) decimais_soft *= -1;
+
+    snprintf(msg, sizeof(msg), "RAW: %ld | V: %ld.%06ld V | RAW_SOFT: %ld | V_SOFT: %ld.%06ld V\r\n", raw, integras, decimais, raw_soft, integras_soft, decimais_soft);
 
     HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), HAL_MAX_DELAY);
     HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_11);
@@ -247,10 +292,10 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10|GPIO_PIN_11|GPIO_PIN_4|GPIO_PIN_5, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10|GPIO_PIN_11|SW_I2C_SDA_Pin|SW_I2C_SCL_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : PB10 PB11 PB4 PB5 */
-  GPIO_InitStruct.Pin = GPIO_PIN_10|GPIO_PIN_11|GPIO_PIN_4|GPIO_PIN_5;
+  /*Configure GPIO pins : PB10 PB11 */
+  GPIO_InitStruct.Pin = GPIO_PIN_10|GPIO_PIN_11;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -260,6 +305,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pin = GPIO_PIN_3;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : SW_I2C_SDA_Pin SW_I2C_SCL_Pin */
+  GPIO_InitStruct.Pin = SW_I2C_SDA_Pin|SW_I2C_SCL_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
